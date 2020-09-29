@@ -10,10 +10,9 @@
 <body>
 
 <div class="container content">
+<h1 class='text-center'>Riepilogo stanze</h1>
 <table class="table">
 	<thead>
-
-		
 		<tr>
 			<th>ID</th>
 			<th>Numero stanza</th>
@@ -22,17 +21,17 @@
 			<th></th>
 			<th></th>
 		</tr>
-		
+
 	</thead>
 	<tbody>
-		<?php foreach ($results as $rooms) : ?>
+		<?php foreach ($results as $room) : ?>
 		<tr>
-			<td><?= $rooms['id']?></td>
-			<td><?= $rooms['room_number']?></td>
-			<td><?= $rooms['floor']?></td>
-			<td><a href="#" class="btn btn-primary stretched-link">INFO</a></td>
-			<td><a href="#" class="btn btn-warning stretched-link">UPDATE</a></td>
-			<td><a href="#" class="btn btn-danger stretched-link">DELETE</a></td>
+			<td><span class="badge badge-primary badge-pill"><?= $room['id']?></span></td>
+			<td><?= $room['room_number']?></td>
+			<td><?= $room['floor']?></td>
+			<td><a href="info.php?id=<?= $room['id']; ?>" class="btn btn-primary">VIEW</a></td>
+			<td><a href="#" class="btn btn-warning">UPDATE</a></td>
+			<td><a href="#" class="btn btn-danger">DELETE</a></td>
 		</tr>
 		<?php endforeach; ?>
 	</tbody>

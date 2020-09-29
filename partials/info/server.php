@@ -2,34 +2,27 @@
 
 include __DIR__ . '/../env.php';
 
-
+$id = $_GET['id'];
 
 if($conn && $conn->connect_error){
-  echo 'Connessione fallita' .$conn->connect_error;
-  die();
+  die('ricerca fallita');
 } 
  else{
 
-  $sql = "SELECT id, room_number, floor FROM `stanze`";
+  $sql = "SELECT id, room_number, floor, beds FROM stanze WHERE id = $id";
   $result = $conn->query($sql);
 
   if($result && $result->num_rows > 0){
-    $results = [];
-    while($row = $result->fetch_assoc()){ 
-      $results[] = $row;
+   
+    $row = $result->fetch_assoc();
+    
     }
-
-  }
   elseif ($result) {
     echo "0 results";
   } else {
     echo "query error";
   }
-
 } 
 
-
-
 $conn->close();
-
  ?>

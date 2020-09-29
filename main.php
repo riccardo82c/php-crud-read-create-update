@@ -31,7 +31,13 @@
 			<td><?= $room['floor']?></td>
 			<td><a href="info.php?id=<?= $room['id']; ?>" class="btn btn-primary">VIEW</a></td>
 			<td><a href="#" class="btn btn-warning">UPDATE</a></td>
-			<td><a href="#" class="btn btn-danger">DELETE</a></td>
+			<td>
+			<form action="partials/delete/server.php" method="post">
+				<input type="hidden" name="id" value='<?= $room['id']; ?>'>
+				<input type="submit" value="DELETE" class="btn btn-danger">
+			</form>
+			</td>
+
 		</tr>
 		<?php endforeach; ?>
 	</tbody>

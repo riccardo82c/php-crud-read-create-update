@@ -13,12 +13,14 @@ if($conn && $conn->connect_error){
 
   $sql = "DELETE FROM stanze WHERE id = $id ";
   $result = $conn->query($sql);
-  
+ 
 } 
 
 $conn->close();
 
-$dir = __DIR__;
+/* $location = __DIR__ . "/../../main.php"; */
 
-/* header("location:" . $dir . "/../../main.php"); */
+
+header("location: ../../main.php" ); 
+
  ?>

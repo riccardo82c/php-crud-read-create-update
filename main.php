@@ -1,4 +1,8 @@
 <?php 
+	
+	
+
+	/* header("localhost".$_SERVER['REQUEST_URI']); */
 
 	/* includo l'header prendendolo da templates */
 	include __DIR__ . '/partials/templates/header.php';

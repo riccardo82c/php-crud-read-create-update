@@ -19,5 +19,7 @@ include __DIR__ . '/partials/info/server.php';
 </div>
 </div>
 
+<?php include __DIR__ . '/partials/templates/footer.php'; ?>
+
 </body>
 </html>

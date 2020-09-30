@@ -1,9 +1,4 @@
 <?php 
-	
-	
-
-	/* header("localhost".$_SERVER['REQUEST_URI']); */
-
 	/* includo l'header prendendolo da templates */
 	include __DIR__ . '/partials/templates/header.php';
 	/* includo la connessione al db che mi restituisce una query */
@@ -15,6 +10,23 @@
 
 <div class="container content">
 <h1 class='text-center'>Riepilogo stanze</h1>
+
+
+<?php 
+
+if (!empty($_GET['id']) ) { 
+
+	if($_GET['id'] != 'null'){	$idDeleted = $_GET['id'];?>
+	<div class="delete-result bg-success p-2">
+		E' stata correttamente cancellata la stanza con ID: <strong><?=$idDeleted?></strong>
+	</div>
+	<?php } else { ?>
+	<div class="delete-result bg-warning p-2">
+		Non è stato possibile cancellare la stanza
+	</div>
+	<?php }; ?>
+<?php } else {}?>
+
 <table class="table">
 	<thead>
 		<tr>
@@ -47,6 +59,8 @@
 	</tbody>
 </table>
 </div>
+
+<?php include __DIR__ . '/partials/templates/footer.php'; ?>
 	
 </body>
 </html>

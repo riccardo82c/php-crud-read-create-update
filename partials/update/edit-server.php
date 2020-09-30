@@ -19,11 +19,24 @@ if($conn && $conn->connect_error){
 
 	var_dump($stmt);
 
-	if ($stmt->affected_rows >= 0) {
+
+	if ($stmt->affected_rows > 0) {
+		/* ho modificato qualcosa */
+		header("location: $basepath/info.php?id=$id&flag=ok");
+	} else if ($stmt->affected_rows == 0){
+		/* non ho modificato nulla */
+		header("location: $basepath/update.php?id=$id&flag=no" );
+	} else {
+		/* errore campo inserito non valido */
+		header("location: $basepath/update.php?id=$id&flag=ko" );
+	}
+	
+
+	/* if ($stmt->affected_rows >= 0) {
 		header("location: $basepath/info.php?id=$id" );
 	} else {
 		header("location: $basepath/update.php?id=$id" );
-	}
+	} */
 } 
 $conn->close();
 ?>

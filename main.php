@@ -9,25 +9,25 @@
 
 
 <div class="container content">
-<h1 class='text-center'>Riepilogo stanze</h1>
+<h1 class='text-center text-dark'>Riepilogo stanze</h1>
 
 
 <?php 
 
 if (!empty($_GET['id']) ) { 
 	if($_GET['id'] != 'null'){	$idDeleted = $_GET['id'];?>
-	<div class="delete-result bg-success p-2">
+	<div class="alert bg-success p-2">
 		E' stata correttamente cancellata la stanza con ID: <strong><?=$idDeleted?></strong>
 	</div>
 	<?php } else { ?>
-	<div class="delete-result bg-warning p-2">
+	<div class="alert bg-warning p-2">
 		Non è stato possibile cancellare la stanza
 	</div>
 	<?php }; ?>
 <?php } else {}?>
 
-<table class="table">
-	<thead>
+<table class="table table-hover">
+	<thead class="">
 		<tr>
 			<th>ID</th>
 			<th>Numero stanza</th>
@@ -41,7 +41,7 @@ if (!empty($_GET['id']) ) {
 	<tbody>
 		<?php foreach ($results as $room) : ?>
 		<tr>
-			<td><span class="badge badge-primary badge-pill"><?= $room['id']?></span></td>
+			<td><strong><?= $room['id']?></strong></td>
 			<td><?= $room['room_number']?></td>
 			<td><?= $room['floor']?></td>
 			<td><a href="info.php?id=<?= $room['id']; ?>" class="btn btn-primary">VIEW</a></td>

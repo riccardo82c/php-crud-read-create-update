@@ -9,7 +9,7 @@ $dbname = "dbhotel";
 
 
 
-$host = "http://localhost/"; /* server */
+$host = "http://localhost"; /* server */
 $folder = ""; /* cartella */
 
 // path iniziale

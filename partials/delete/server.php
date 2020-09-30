@@ -15,12 +15,11 @@ if($conn && $conn->connect_error){
 
 	$stmt->execute();
 
-	var_dump($stmt);
-
 	if ($stmt->affected_rows > 0) {
-		header("location: $localhost/main.php?id=$id" );
+		header("location: $basepath/main.php?id=$id" );
 	} else {
-		header("location: $localhost/main.php?id=null" );
+		header("Location: $basepath/main.php?id=null");
+		/* header("location: $localhost/main.php?id=null" ); */
 	}
 
   /* $sql = "DELETE FROM stanze WHERE id = $id ";

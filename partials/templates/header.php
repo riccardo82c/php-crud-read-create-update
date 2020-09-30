@@ -7,11 +7,12 @@
 	<title>PHP-CRUD Db</title>
 </head>
 
+<body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Hotel Bool</a>
   <ul class="navbar-nav ml-auto">
-      
-      <li class="nav-item">
+     <li class="nav-item">
         <a class="nav-link" href="main.php">Stanze</a>
       </li>
     </ul>

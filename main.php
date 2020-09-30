@@ -6,7 +6,7 @@
 	
 ?>
 
-<body>
+
 
 <div class="container content">
 <h1 class='text-center'>Riepilogo stanze</h1>
@@ -15,7 +15,6 @@
 <?php 
 
 if (!empty($_GET['id']) ) { 
-
 	if($_GET['id'] != 'null'){	$idDeleted = $_GET['id'];?>
 	<div class="delete-result bg-success p-2">
 		E' stata correttamente cancellata la stanza con ID: <strong><?=$idDeleted?></strong>
@@ -46,7 +45,7 @@ if (!empty($_GET['id']) ) {
 			<td><?= $room['room_number']?></td>
 			<td><?= $room['floor']?></td>
 			<td><a href="info.php?id=<?= $room['id']; ?>" class="btn btn-primary">VIEW</a></td>
-			<td><a href="#" class="btn btn-warning">UPDATE</a></td>
+			<td><a href="update.php?id=<?= $room['id']; ?>" class="btn btn-warning">UPDATE</a></td>
 			<td>
 			<form action="partials/delete/server.php" method="post">
 				<input type="hidden" name="id" value='<?= $room['id']; ?>'>
@@ -62,5 +61,3 @@ if (!empty($_GET['id']) ) {
 
 <?php include __DIR__ . '/partials/templates/footer.php'; ?>
 	
-</body>
-</html>

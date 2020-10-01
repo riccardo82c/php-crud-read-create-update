@@ -32,6 +32,7 @@ if($conn && $conn->connect_error){
 	header("location: $localhost/main.php?id=null" );
   } */
 } 
+$stmt->close();
 $conn->close();
 
  ?>

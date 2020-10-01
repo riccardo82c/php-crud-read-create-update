@@ -7,7 +7,7 @@ $password = "root";
 $dbname = "dbhotel";
 
 $host = "http://localhost"; /* server */
-$folder = ""; /* cartella */
+$folder = "/Repo/php-crud-read-create-update/"; /* cartella */
 
 // path iniziale
 $basepath = $host.$folder; /* http://localhost */

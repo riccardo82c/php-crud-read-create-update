@@ -10,7 +10,7 @@ if($conn && $conn->connect_error){
 } 
  else{
 
-  $sql = "SELECT id, room_number, floor FROM `stanze`";
+  $sql = "SELECT id, room_number, floor FROM `stanze` ORDER BY room_number ASC";
   $result = $conn->query($sql);
 
   if($result && $result->num_rows > 0){

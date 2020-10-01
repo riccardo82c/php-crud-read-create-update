@@ -13,7 +13,10 @@
   <a class="navbar-brand" href="#">Hotel Bool</a>
   <ul class="navbar-nav ml-auto">
      <li class="nav-item">
-        <a class="nav-link" href="main.php">Stanze</a>
+	  	  <a class="nav-link" href="create.php">Inserisci</a>
+      </li>
+		<li class="nav-item">
+	  	  <a class="nav-link" href="main.php">Stanze</a>
       </li>
     </ul>
   </div>

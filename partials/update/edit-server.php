@@ -38,5 +38,6 @@ if($conn && $conn->connect_error){
 		header("location: $basepath/update.php?id=$id" );
 	} */
 } 
+$stmt->close();
 $conn->close();
 ?>

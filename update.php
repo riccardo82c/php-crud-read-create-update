@@ -1,13 +1,9 @@
 <?php
 include __DIR__ . '/partials/templates/header.php';
-
 include __DIR__ . '/partials/update/server.php';
-
 ?>
 
-
 <body>
-
 	<div class="centrato">
 		<div class="container">
 			<?php if (isset($_GET['flag']) && $_GET['flag']=='no') { ?>
@@ -35,13 +31,10 @@ include __DIR__ . '/partials/update/server.php';
 				<div class="form-group">
 					<input type="submit" class="btn btn-outline-primary btn-block" value="Modifica">
 				</div>
-
 			</form>
 		</div>
 	</div>
-
 	<?php include __DIR__ . '/partials/templates/footer.php'; ?>
-
 </body>
 
 </html>

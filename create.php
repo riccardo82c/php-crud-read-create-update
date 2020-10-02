@@ -1,19 +1,19 @@
 <?php
 include __DIR__ . '/partials/templates/header.php';
-
 ?>
 
-
 <body>
-
 	<div class="centrato">
 		<div class="container">
-			<?php if (isset($_GET['check']) && $_GET['check']=='false') { ?>
-			<div class='alert bg-warning'>Completa tutti i campi</div>
-			<?php } ?> 
-			<?php if (isset($_GET['check']) && $_GET['check']=='error') { ?>
+			<?php if (isset($_GET['check']) && $_GET['check'] == 'false') {?>
+			<div class='alert bg-warning'>Attenzione - Completa tutti i campi</div>
+			<?php }?>
+			<?php if (isset($_GET['check']) && $_GET['check'] == 'noRoom') {?>
+			<div class='alert bg-warning'>Attenzione - Numero Camera già presente</div>
+			<?php }?>
+			<?php if (isset($_GET['check']) && $_GET['check'] == 'error') {?>
 			<div class='alert bg-danger'>Inserimento non andato a buon fine</div>
-			<?php } ?> 
+			<?php }?>
 			<form action="partials/create/server.php" method="post">
 				<div class="form-group">
 					<label for="room_number">Numero Camera: </label>
@@ -34,9 +34,7 @@ include __DIR__ . '/partials/templates/header.php';
 			</form>
 		</div>
 	</div>
-
-	<?php include __DIR__ . '/partials/templates/footer.php'; ?>
-
+	<?php include __DIR__ . '/partials/templates/footer.php';?>
 </body>
 
 </html>

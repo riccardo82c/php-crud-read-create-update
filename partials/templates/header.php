@@ -6,9 +6,7 @@
 	<link rel="stylesheet" href="dist/app.css">
 	<title>PHP-CRUD Db</title>
 </head>
-
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text white">
   <a class="navbar-brand" href="#">Hotel Bool</a>
   <ul class="navbar-nav ml-auto">
